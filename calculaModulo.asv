@@ -7,8 +7,8 @@
 %  matriz: es una matriz de n×3 o 3×n cuyos elementos son numericos.
 % SALIDA
 %  MODULO: es un vector de n×1 o 1×n (segun las dimensiones de la entrada).
-%  Cada elemento del vector se corresponde a la norma 2 de los 3 elementos
-%  de la fila o columna a evaluar.
+%  Cada elemento del vector se corresponde a la norma dos de los 3 elementos
+%  de la fila o columna de la matriz a evaluar.
 %  Si la matriz de entrada no posee las dimensiones adecuadas (una dimension
 %  igual a 3) la salida es igual a 0.
 
