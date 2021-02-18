@@ -1,9 +1,8 @@
 % Autor: Marcos Dominguez
 % Noviembre 2020.
 % Funcion que a partir de los versores i,j,k local de un segmento devuelve
-% el angulo de euler deseado (alfa, beta o gama) en radianes.
-% No tiene aplicado algoritmo de correción de salto +pi -pi. Se sugiere 
-% utilizar funcion "corr_ang180" para corregir los problemas de
+% el angulo de euler deseado (alfa, beta o gama) en radianes con el metodo del Coseno.
+% No tiene aplicado algoritmo de correción de salto +pi -pi. Se sugiere utilizar funcion "corr_ang180" para corregir los problemas de
 % salto
 % ENTRADAS
 %   La funcion recibe las matrices iLocal, jLocal y kLocal. Estas pueden
@@ -20,7 +19,6 @@
 %   El tamaño del vector de salida es frames×1 si las entradas son de
 %   frames×3. En el caso de que las entradas sean 3×frames, la salida sera
 %   de 1×frames.
-%   Los elementos del vector es el angulo de Euler deseado en radianes.
 
 
 
