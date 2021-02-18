@@ -20,14 +20,21 @@
     
     
 % SALIDAS
-%   La variable "resultado" es la salida de la función y corresponde al 
-%   vector cuyos elementos son el angulo de euler deseado (alfa, beta o gama)
-%   por cada frame.
-%   El tamaño del vector de salida es frames×1 si las entradas son de
-%   frames×3. En el caso de que las entradas sean 3×frames, la salida sera
-%   de 1×frames.
-%   Los elementos del vector es el angulo de Euler deseado en radianes.
-
+% alpha: vector cuyos elementos son el angulo alfa de la articulacion
+% deseada por cada frame. Los elementos del vector estan en grados. El
+% tamaño del vector es de 1×frames si las matrices de entrada son de
+% 3×frames. En el caso de que las de que las matrices de entrada sean de
+% frames×3 alpha será de frames×1.
+% beta: vector cuyos elementos son el angulo beta de la articulacion
+% deseada por cada frame. Los elementos del vector estan en grados. El
+% tamaño del vector es de 1×frames si las matrices de entrada son de
+% 3×frames. En el caso de que las de que las matrices de entrada sean de
+% frames×3 beta será de frames×1.
+% gamma: vector cuyos elementos son el angulo gama de la articulacion
+% deseada por cada frame. Los elementos del vector estan en grados. El
+% tamaño del vector es de 1×frames si las matrices de entrada son de
+% 3×frames. En el caso de que las de que las matrices de entrada sean de
+% frames×3 gamma será de frames×1.
 
 
 

@@ -5,30 +5,30 @@
 %coordenado local de los segmentos que se vinculan a la articulación en
 %estudio.
 % ENTRADAS
-    % - iProximal ,jProximal y kProximal: son matrices de tamaño 3×frames o
-    % frames×3 que corresponden a los vectores de los versores i,j y k del segmento
-    % proximal a la articulación para todos los frames. Los elementos de la
-    % matriz son numericos y adimensionales.
-    % - iDistal,kDistal: son matrices de tamaño 3×frames o
-    % frames×3 que corresponden a los vectores de los versores i y k del segmento
-    % distal a la articulación para todos los frames. Los elementos de la
-    % matriz son numericos y adimensionales.
-    % - lado: indica si se quiere evaluar una articulación del lado derecho 
-    % o izquierdo. 1 si es derecha y -1 si es izquierda.
-    % - isAnlke: debido a que la articulación del tobillo tiene un calculo diferente,
-    % la funión requiere dierenciar si se esta por calcular la articulación del tobillo,
-    % varible de tipo logical: true si se estudia el tobillo y false si no
-    % se estudia el tobillo.
+% - iProximal ,jProximal y kProximal: son matrices de tamaño 3×frames o
+% frames×3 que corresponden a los vectores de los versores i,j y k del segmento
+% proximal a la articulación para todos los frames. Los elementos de la
+% matriz son numericos y adimensionales.
+% - iDistal,kDistal: son matrices de tamaño 3×frames o
+% frames×3 que corresponden a los vectores de los versores i y k del segmento
+% distal a la articulación para todos los frames. Los elementos de la
+% matriz son numericos y adimensionales.
+% - lado: indica si se quiere evaluar una articulación del lado derecho 
+% o izquierdo. 1 si es derecha y -1 si es izquierda.
+% - articulacion: variable de tipo char que define que articulación se
+% estudiara. Las opciones son 'cadera', 'rodilla' y 'tobillo'.
+    
     
 % SALIDAS
-%   La variable "resultado" es la salida de la función y corresponde al 
-%   vector cuyos elementos son el angulo de euler deseado (alfa, beta o gama)
-%   por cada frame.
+% alpha: vector cuyos elementos son el angulo alfa de la articulacion
+% deseada por cada frame. Los elementos del vector estan en grados. El
+% tamaño del vector es de 1×frames si las matrices de entrada son de
+% 3×frames. En el caso de que las de que las matrices de entrada sean de
+% frames×3 alpha sera de frames×1.
 %   El tamaño del vector de salida es frames×1 si las entradas son de
 %   frames×3. En el caso de que las entradas sean 3×frames, la salida sera
 %   de 1×frames.
 %   Los elementos del vector es el angulo de Euler deseado en radianes.
-
 
 
 
@@ -46,12 +46,16 @@ function [alpha,beta,gamma]=angulos_articulares(iProximal,jProximal,kProximal,iD
     end
 disp('      calculando I articular')   
     IArticular=cross(kProximal,iDistal); % calculo de i de artiulación
-    if (articulacion=='tobillo') % control si es la articulación del tobillo porque el angulo alpha difiere en el cálculo.
+    if (strcmp(articulacion,'tobillo')) % control si es la articulación del tobillo porque el angulo alpha difiere en el cálculo.
         disp('      calculando alfa')
         alpha=-asind(dot(IArticular,jProximal));%%rotación sobre eje articular 1 (coincide con k proximal)
     else
         disp('      calculando alfa')
         alpha=asind(dot(IArticular,iProximal)); %%rotación sobre eje articular 1 (coincide con k proximal)
+        if (strcmp(articulacion,'rodilla')) % control si es la articulación de la rodilla porque se invierte el alfa
+            alpha=-alpha;
+        end
+        
     end
     disp('      calculando gamma')
     gamma=-lado*asind(dot(IArticular,kDistal));%%rotación sobre eje articular 3 (coincide con i distal)
