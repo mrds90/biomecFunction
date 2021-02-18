@@ -1,0 +1,11 @@
+%Autor: Marcos Dominguez
+%Noviembre 2020
+% La funcion calcula las matrices de cambio de base local a global (MLaG) y  global
+% a local (MGaL) a partir de los versores i,j y k del segmento.
+% ENTRADA
+% las entradas 
+function [MLaG , MGaL]=calcular_matrices_g_a_l(i,j,k)
+    MLaG=cat(3,i,j,k);
+    MLaG=permute(MLaG,[2 3 1]);
+    MGaL=permute(MLaG,[2 1 3]);
+end
