@@ -6,19 +6,17 @@
 %estudio.
 % ENTRADAS
 % - iProximal ,jProximal y kProximal: son matrices de tamaño 3×frames o
-% frames×3 que corresponden a los vectores de los versores i,j y k del segmento
+% frames×3 que corresponden a los versores i,j y k del segmento
 % proximal a la articulación para todos los frames. Los elementos de la
 % matriz son numericos y adimensionales.
 % - iDistal,kDistal: son matrices de tamaño 3×frames o
-% frames×3 que corresponden a los vectores de los versores i y k del segmento
+% frames×3 que corresponden a los versores i y k del segmento
 % distal a la articulación para todos los frames. Los elementos de la
 % matriz son numericos y adimensionales.
 % - lado: indica si se quiere evaluar una articulación del lado derecho 
 % o izquierdo. 1 si es derecha y -1 si es izquierda.
 % - articulacion: variable de tipo char que define que articulación se
 % estudiara. Las opciones son 'cadera', 'rodilla' y 'tobillo'.
-    
-    
 % SALIDAS
 % alpha: vector cuyos elementos son el angulo alfa de la articulacion
 % deseada por cada frame. Los elementos del vector estan en grados. El
