@@ -6,10 +6,7 @@
 % generalmente al número de frames que se están trabajando. Cada elemento
 % del vector es un valor angular en radianes.
 % SALIDA:
-% ANGULO: es un vector del mismo tamaño que la entrada cuyos elementos son
-% identicos si no habia discontinuidades en la señal y suavizada si en el
-% vector de entrada habia saltos cercanos a los 2*PI. La unidad de los
-% elementos sigue siendo radianes.
+% ANGULO: es el vector d
 
 
 function ANGULO= corr_ang180(vector)
