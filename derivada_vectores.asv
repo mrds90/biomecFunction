@@ -20,9 +20,8 @@
 % SALIDA
 % d1Vectores: es una matriz del mismo tamaño que la matriz "Vectores" cuyos
 % elementos corresponden al valor de la derivada discreta respecto al
-% tiempo de la matriz de entrada. Los valores correspondientes al frame 
-% inicial (frame nro 1) y final (frame==length(Vectores)) de esta matriz no
-% son datos validos.
+% tiempo de la matriz de entrada. Los valores correspondiinicial y final de esta matriz
+% no son datos validos.
 
 function d1Vectores=derivada_vectores(Vectores, dt)
     
