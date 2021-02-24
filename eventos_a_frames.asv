@@ -12,16 +12,15 @@
     %La función eventos_a_frames recibe la estructura de EVENTOS  y la frecuenciaDeMuestreo 
     %para convertir los datos de HS1,HS2 y TO que se encuentran en tiempo (segundos) a numero
     %de Frames, utilizando la Frecuencia de adquisición de los datos. 
+    %Los datos de salida (frames) seran usados como índices de posición en las señales, 
+    %por lo que se los convierte a enteros durante su obtención.
 % ENTRADAS
-    %EVENTOS Estructura que tiene los campos:
-%     Derecho_RHS: Contactos del pie derecho (type:struct, tamaño [1x2], 
-%       unidades: segundos)
-%     Izquierdo_LHS: Contactos del pie izquierdo (type:struct, tamaño [1x2], 
-%       unidades: segundos)
-%     Derecho_RTO: Despegue del pie derecho (type:struct, tamaño [1x1], 
-%       unidades: segundos)
-%     Izquierdo_LTO: Despegue del pie izquierdo (type:struct, tamaño [1x1], 
-%       unidades: segundos)
+    %EVENTOS (type:struct, tamaño 4x1, unidades: segundos) tiene los
+    %campos:
+%     Derecho_RHS: [1×2]
+%     Izquierdo_LHS: [1×2]
+%     Derecho_RTO: [1×1]
+%     Izquierdo_LTO: [1×1]
     %frecuenciaDeMuestreo (type: double, tamaño 1x1, unidades:fps-frames por segundo-)
 % SALIDAS
     % frameRHS1,frameLHS1,frameRHS2,frameLHS2,frameRTO,frameLTO (type: int, tamaño: 1x1, unidades: frames)

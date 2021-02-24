@@ -20,7 +20,7 @@
 %   El tamaño del vector de salida es frames×1 si las entradas son de
 %   frames×3. En el caso de que las entradas sean 3×frames, la salida sera
 %   de 1×frames.
-%   Los elementos del vector es el angulo de Euler deseado en radianes.
+%   Los elementos del vector son el angulo de Euler deseado en radianes.
 
 
 
