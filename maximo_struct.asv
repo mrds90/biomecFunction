@@ -2,13 +2,10 @@
 % Noviembre 2020
 % Explora, utilizando recursividad, los elementos de una estructura y devuelve el valor máximo entre
 % todos los elementos.
-% ENTRADA
+% ENTRADA:
 %   ESTRUCTURA: es una estructura con campos variables. La unica condición
 %   de la estructura es que en sus campos finales solo haya elementos
-%   numericos (no importa la cantidad de dimensiones).
-% SALIDA
-%   MaximoAbsoluto: es un valor numerico de tamaño [1×1] que corresponde al
-%   elemento de mayor valor entre todos los elementos de la estructura.
+%   numericos (n
 
 
 
