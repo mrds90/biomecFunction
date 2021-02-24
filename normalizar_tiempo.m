@@ -1,5 +1,22 @@
-%Normaliza un vector a un vector con longitud 101 entre los evento1 y
-%evento2
+% Normaliza temporalmente una matriz o vector. Define una nueva variable
+% donde su dimensión mas larga es de 101 elementos y calcula los valores
+% correspondientes mediante interpolación.
+% ENTRADA
+%   Matriz: Es una matriz de tamaño [n×m] con elementos numéricos. Esta es
+%   la varaible que se normalizará. Tipicamente será un vector de [n×1] o
+%   [1×m] o una matriz de [n×3] o [3×m].
+%   Evento 1: primer frame o indice de la dimensión mayor de la variable 
+%   "Matriz" que corresponde al 0% de la variable normalizada. Es un dato
+%   del tipo int con tamaño [1×1].
+%   Evento 2: ultimo frame o indice de la dimensión mayor de la variable 
+%   "Matriz" que corresponde al 100% de la variable normalizada. Es un dato
+%   del tipo int con tamaño [1×1].
+% SALIDA
+%   vectorNormalizado: es una matriz de tamaño [n×101] o [101×m] (segun la 
+%   entrada). Sus elementos corresponden a la interpolación de los
+%   elementos de la variable "Matriz" entre los indices "Evento1" y
+%   "Evento2" de la dimensión de mayor longitud.
+
 function vectorNormalizado= normalizar_tiempo(Matriz,Evento1,Evento2)
 if (length(Matriz(:,1))>length(Matriz(1,:)))
     vectorNormalizado=zeros(101,length(Matriz(1,:)));
