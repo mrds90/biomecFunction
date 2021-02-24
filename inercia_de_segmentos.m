@@ -1,9 +1,19 @@
 %Autor: Marcos Dominguez
 %Noviembre 2020
-
-%Calcula las matrices de inercia del segmento pie,pierna y muslo en función de la masa y
-%altura del sujeto (para sujetos adultos con todos los miembros).
-
+% [inerciaPie, inerciaPierna , inerciaMuslo] = inercia_de_segmentos(pesoKg, alturaMts)
+% Calcula las matrices de inercia del segmento pie,pierna y muslo en función de la masa y
+% altura del sujeto (para sujetos adultos con todos los miembros).
+% ENTRADA
+%   pesoKg: en una variable de tipo double de tamaño [1×1] que representa el
+%   peso en Kilogramos del sujeto en estudio.
+%   alturaMts: en una variable de tipo double de tamaño [1×1] que representa 
+%   la altura en metros del sujeto en estudio.
+% SALIDA:
+%   inerciaPie,inerciaPierna e inerciaMuslo: son las matrices de inercia del
+%   pie, pierna y muslo respectivamente. Estas matrices tienen tamaño [3×3]
+%   debido a que se consideran constate para todos los frames. Estan
+%   expresadas en terminos del sistema coordenado local y sus unidades son
+%   [Kg×m^2]
 function [inerciaPie, inerciaPierna , inerciaMuslo] = inercia_de_segmentos(pesoKg, alturaMts)
 alturaMts=alturaMts*100;
 CoefIyy=[-100 0.480 0.626;-1105 4.59 6.63 ;-3557 31.7 18.61];
