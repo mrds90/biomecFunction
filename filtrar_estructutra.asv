@@ -4,13 +4,7 @@
 % ENTRADAS
 %   estructura: estructura cuyos campos finales son vectores o matrices con
 %   elementos numericos.
-%   a: coeficientes del denominador del filtro butter.
-%   b: coeficientes del numerador del filtro butter.
-% SALIDA
-%   A: es un struct de formato idéntico a la variable "estructura", cuyas
-%   matrices estan filtradas con la funcion filtfilt y los vectores de
-%   coeficientes a y b.
-
+%   a: coeficientes del denominador del filtro butter
 function A=filtrar_estructutra(estructura,a,b)
     if isstruct(estructura)
             Subnivel=fieldnames(estructura);
