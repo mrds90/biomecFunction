@@ -15,7 +15,7 @@
 % SALIDA
 %   Grafica en una figura de los puntos elegidos en el espacio.
 % EJEMPLO
-% graficarPuntos('r',EVENTO.RHS1,MARCADORES.r_asis,MARCADORES.r_knee1,MARCADORES.r_heel)
+% graficarPuntos('r',EVENTO.RHS1,MARCADORE)
 
 
 
