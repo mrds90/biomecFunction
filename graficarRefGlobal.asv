@@ -1,10 +1,8 @@
 % Autor: Marcos Dominguez
 % Noviembre 2020
 % Grafica una Triada con origen en el (0,0,0) global.
-% El vector rojo representa la primera dimensión global, el vector verde a
-% la segunda dimensión global y el azul a la tercera dimensión global 
-% (tipicamente X, Y y Z).
-
+% el vector rojo representa la primera dimensión, el vector verde a la
+% segunda dimensión y el azul a la tercera dime
 function graficarRefGlobal
 quiver3(0,0,0,0.3,0,0,'r')
 hold on
