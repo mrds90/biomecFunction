@@ -8,14 +8,7 @@
 %   orden: es el orden deseado del filtro, del tipo int y adimencional.
 %   MARCADORES: estructura cuyos campos son matrices con distintos
 %   marcadores. Cada campo tiene tamaño [n×3].
-%   frecuenciaDeMuestreo: es la frecuencia de muestreo de las señales. De
-%   tamaño [1×1] y tipo de dato numérico (double o int).
-% SALIDA
-%   ESTRUCTURA_FILTRADA: es una estructra con los mismos campos que
-%   MARCADORES cuyas matrices fueron filtradas en función de los
-%   parametros deseados. El tamaño de las matrices se conserva pero cambian
-%   los valores de sus elementos.
-
+%   frecuenciaDeMuestreo: es la frecuencia de muestreo de las señales.
 function ESTRUCTURA_FILTRADA=filtrar(fc,orden,MARCADORES,frecuenciaDeMestreo)
 Wc=2*fc/frecuenciaDeMestreo; % frecuencia de corte normalizada
 [a,b] = butter(orden,Wc);
