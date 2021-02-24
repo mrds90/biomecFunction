@@ -8,9 +8,9 @@
 %   alturaMts: en una variable de tipo double de tamaño [1×1] que representa 
 %   la altura en metros del sujeto en estudio.
 % SALIDA:
-%   masaPie, masaPierna y masaMuslo: son las masa del pie, pierna y muslo
-%   respectivamente. Estas variables tienen tamaño [1×1] y son del tipo
-%   double. Sus unidades son Kilogramos [Kg].
+%   masaPie, masaPierna y masaMuslo: son las masa del
+%   pie, pierna y muslo respectivamente. Estas variables tienen tamaño [1×1]
+%   y son del tipo double. Sus unidades son [Kg×m^2]
 function [masaPie, masaPierna , masaMuslo] = masa_de_segmentos(pesoKg, alturaMts)
 alturaMts=alturaMts*100;
 coefMasa=[-0.8290    0.0077    0.0073;   -1.5920    0.0362    0.0121;   -2.6490    0.1463    0.0137];
