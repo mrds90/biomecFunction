@@ -14,9 +14,7 @@
 %  Los campos contienen un dato int de tamaño [1×1] con el valor en frame
 %  del evento.
 % SALIDA
-%   EVENTO_RECORTADOS: es una estructura identica en formato a la variable
-%   "EVENTOS_ORIGINALES" pero con los eventos redefinidos como si el frame
-%   "PrimerDatoConSenial" fuera el frame 1.
+
 function EVENTOS_RECORTADOS=recalcular_eventos(EVENTOS_ORIGINALES,PrimerDatoConSenial)
 Subnivel=fieldnames(EVENTOS_ORIGINALES);
 for Cont=1:length(Subnivel)
