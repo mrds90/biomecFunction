@@ -7,11 +7,6 @@
 %   v1, v2 y v3: son matrices de tamaño [n×3] donde n es entero y mayor a
 %   0. Las filas de estas matrices son versores. v1,v2 y v3 deberian ser
 %   versores perpendiculares entre si.
-% SALIDA
-%   La función reporta por display si los versores v1, v2 y v3 son
-%   perpendiculares entre si y tienen modulo 1. En caso de que no lo 
-%   sean por display se reporta el motivo por el que no cumplen con la 
-%   ortonormalidad.
 function ortonormalidad_triada(v1,v2,v3)
 % el producto punto de dos versores perpendiculares es igual a cero. Lo
 % usamos para verificar perpendicularidad.
