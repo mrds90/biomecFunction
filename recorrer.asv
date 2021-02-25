@@ -1,25 +1,22 @@
 % Autor: Marcos Dominguez
 % Enero 2016
 % Funcion que reccorre una estructura y ejecuta la función sobre los
-% campos al final de la cadena de la estructura.
-% Un Campo fial es aquel campo que no es una estructura, por lo que
-% no se desglosa en nuevos campos.
-% La función recorrer solo sirve con funciones donde los campos finales 
-% de la estructura deben estar como primer argumento de la función. 
+% elementos al final de la cadena de la estructura
+% solo sirve para funciones donde los campos finales de la estructura deben
+% estar como primer argumento de la función. 
 % ENTRADA
 %   estructura: es una estructura de campos variables. Es importante que
 %   todos los campos finales sean del tipo que requiere la función como 
 %   primer argumento.
 %   varagin: son los argumentos adicionales que necesita la funcion, en el
-%   mismo orden que se ingresan a la función. Si la función no tiene
+%   mismo orden que se ingresan a la función. Si la función no tienen
 %   argumentos adicionales a la variable de la estructura puede no
-%   utilizarse este argumento.
+%   completarse este argumento.
 % SALIDA
-%   A: es una estructura con el mismo formato que la estrucutra de entrada,
-%   pero con los elementos de los campos finales modificados segun la
-%   función.
+%   A:
+
 % EJEMPLO
-% MARCADORES_DERIVADOS=recorrer(MARCADORES,'derivada_vectores',dt)
+% recorrer(MARCADORES,'derivada_vectores',dt)
 function A=recorrer(estructura,funcion,varargin)
     if isstruct(estructura)
         Subnivel=fieldnames(estructura);
