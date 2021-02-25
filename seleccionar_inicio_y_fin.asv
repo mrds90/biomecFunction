@@ -26,7 +26,7 @@
 %   ultimoDatoConSenial: puede ser el indice del menor ultimo elemento no 
 %   NaN entre los marcadores o el indice cuyo valor es la suma del
 %   ultimo evento mas la variable "framesDespuesHSParaRecortar". El 
-%   algoritmo elige el mayor entre estas dos opciones.
+%   algoritmo   elige el mayor entre estas dos opciones.
 function [primerDatoConSenial, ultimoDatoConSenial]=seleccionar_inicio_y_fin(MARCADORES,EVENTO,framesAntesHSParaRecortar,framesDespuesHSParaRecortar)
 PrimerEvento=minimo_struct(EVENTO); %busco primer evento (minimo en la estructura de eventos)
 UltimoEvento=maximo_struct(EVENTO); %busco ultimo evento (máximo en la estructura de eventos)
