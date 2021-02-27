@@ -1,5 +1,5 @@
-%Autor: Marcos Dominguez
-% Noviembre 2020
+% nuevo_vector=momentos_en_ejes_anatomicos(vector,eje_medial_lateral, eje_rotacion_int_ext,lado)
+% 
 % La funcion recive como parametros un Momento en coordenadas globales y
 % dos ejes anatomicos (eje flexión/extensión y rotacion int/ext). Calcula el 
 % tercer eje anatómico y descompone el vector de Momento en esos tres ejes.
@@ -27,6 +27,12 @@
 %      eje de flexión/extensión, en la columna dos esta la proyección sobre el
 %      eje abducción/aducción y en la columna tres esta la proyección del 
 %      vector momento sobre el eje de rotación int/ext.
+% EJEMPLO
+%   Momento de la rodilla derecha en ejes anatómicos
+%   MomentoRodillaDerechaAnatomica=momentos_en_ejes_anatomicos(MomentoDeRodillaDerecha,kMusloDerecho, iPiernaDerecha,'r')
+%
+% Autor: Marcos Dominguez
+% Noviembre 2020
 function nuevo_vector=momentos_en_ejes_anatomicos(vector,eje_medial_lateral, eje_rotacion_int_ext,lado)
 eje_antero_posterior=cross(eje_medial_lateral,eje_rotacion_int_ext);
 eje_antero_posterior=convierteVectorAVersor(eje_antero_posterior);

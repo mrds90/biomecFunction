@@ -1,5 +1,5 @@
-%Autor: Marcos Dominguez
-%Noviembre 2020
+% [masaPie, masaPierna , masaMuslo] = masa_de_segmentos(pesoKg, alturaMts)
+% 
 % Calcula la masa del segmento pie,pierna y muslo en función de la masa y
 % altura del sujeto (para sujetos adultos con todos los miembros).
 % ENTRADA
@@ -11,6 +11,12 @@
 %   masaPie, masaPierna y masaMuslo: son las masa del pie, pierna y muslo
 %   respectivamente. Estas variables tienen tamaño [1×1] y son del tipo
 %   double. Sus unidades son Kilogramos [Kg].
+% EJEMPLO
+% [masa.Pie, masa.Pierna , masa.Muslo] = masa_de_segmentos(56, 1.62)
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
+
 function [masaPie, masaPierna , masaMuslo] = masa_de_segmentos(pesoKg, alturaMts)
 alturaMts=alturaMts*100;
 coefMasa=[-0.8290    0.0077    0.0073;   -1.5920    0.0362    0.0121;   -2.6490    0.1463    0.0137];

@@ -1,5 +1,5 @@
-% Autor: Marcos Dominguez
-% Enero 2016
+% A=recorrer(estructura,funcion,varargin)
+% 
 % Funcion que reccorre una estructura y ejecuta la función sobre los
 % campos al final de la cadena de la estructura.
 % Un Campo fial es aquel campo que no es una estructura, por lo que
@@ -19,7 +19,10 @@
 %   pero con los elementos de los campos finales modificados segun la
 %   función.
 % EJEMPLO
-% MARCADORES_DERIVADOS=recorrer(MARCADORES,'derivada_vectores',dt)
+%   MARCADORES_DERIVADOS=recorrer(MARCADORES,'derivada_vectores',dt)
+% 
+% Autor: Marcos Dominguez
+% Enero 2016
 function A=recorrer(estructura,funcion,varargin)
     if isstruct(estructura)
         Subnivel=fieldnames(estructura);

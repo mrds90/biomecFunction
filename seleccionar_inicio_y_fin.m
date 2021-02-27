@@ -1,5 +1,3 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
 %Esta funcion decide cual sera el primer y ultimo elemento de la señal
 %recortada. Debido a que los NaN pueden generar inconvenientes, en esta
 %función se comprueba que la porción elegida para recortar la señal no
@@ -27,6 +25,14 @@
 %   NaN entre los marcadores o el indice cuyo valor es la suma del
 %   ultimo evento mas la variable "framesDespuesHSParaRecortar". El 
 %   algoritmo elige el mayor entre estas dos opciones.
+% EJEMPLO
+%   Caso donde se pretende dejar 10 frames antes del primer evento y 10 
+%   frames despues del ultimo evento:
+%      [primerDatoConSenial, ultimoDatoConSenial]=seleccionar_inicio_y_fin(MARCADORES,EVENTO,10,10)
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
+
 function [primerDatoConSenial, ultimoDatoConSenial]=seleccionar_inicio_y_fin(MARCADORES,EVENTO,framesAntesHSParaRecortar,framesDespuesHSParaRecortar)
 PrimerEvento=minimo_struct(EVENTO); %busco primer evento (minimo en la estructura de eventos)
 UltimoEvento=maximo_struct(EVENTO); %busco ultimo evento (máximo en la estructura de eventos)

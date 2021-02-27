@@ -1,5 +1,4 @@
-%Autor: Marcos Dominguez
-%Noviembre 2020
+% [FUERZA, MOMENTO]=asignar_lado_a_plataforma(plataforma1,plataforma2,RHS1,LHS1)
 % Es una función de acondicionamiento de datos que permite referenciar los 
 % datos dinamicos de las plataforma 1 y 2 a los miembros derecho e 
 % izquierdo evaluando el orden de los eventos iniciales de cada miembro y
@@ -42,6 +41,11 @@
 %       - plataforma_l: matriz de n×3, donde cada columna
 %       representa la componente X,Y y Z del momento de la
 %       platafoma donde pisa el pie izquierdo para rodos los frames.
+% EJEMPLO
+%   [FUERZA, MOMENTO]=asignar_lado_a_plataforma(DATOS.Dinamica.Plataforma1.Valores,DATOS.Dinamica.Plataforma2.Valores,EVENTO.RHS1,EVENTO.LHS1)
+% 
+%Autor: Marcos Dominguez
+%Noviembre 2020
 function [FUERZA, MOMENTO]=asignar_lado_a_plataforma(plataforma1,plataforma2,RHS1,LHS1)
 plataforma1=vectores_de_estructura_a_matriz(plataforma1);
 plataforma2=vectores_de_estructura_a_matriz(plataforma2);

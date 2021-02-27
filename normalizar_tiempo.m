@@ -1,3 +1,5 @@
+% vectorNormalizado= normalizar_tiempo(Matriz,Evento1,Evento2)
+% 
 % Normaliza temporalmente una matriz o vector. Define una nueva variable
 % donde su dimensión mas larga es de 101 elementos y calcula los valores
 % correspondientes mediante interpolación.
@@ -16,7 +18,13 @@
 %   entrada). Sus elementos corresponden a la interpolación de los
 %   elementos de la variable "Matriz" entre los indices "Evento1" y
 %   "Evento2" de la dimensión de mayor longitud.
-
+% EJEMPLO
+%   normalizar angulo de flexion/extencion de la rodilla derecha
+%   temporalmente:
+%   AnguloAlfaRodillaDerechaNormalizado=normalizar_tiempo(Angulo.RodillaDerecha.Alfa,EVENTO.RHS1,EVENTO.RHS2)
+% 
+% Autor: Marcos Dominguez
+% abril 2019
 function vectorNormalizado= normalizar_tiempo(Matriz,Evento1,Evento2)
 if (length(Matriz(:,1))>length(Matriz(1,:)))
     vectorNormalizado=zeros(101,length(Matriz(1,:)));

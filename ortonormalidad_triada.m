@@ -1,5 +1,3 @@
-% Autor: Marcos Dominguez
-% Agosto 2020
 % Controla que los tres versores de entradas sean perpendiculares entre si 
 % y que el modulo de cada versor sea 1 en todos los frames. (sirve para 
 % matrices de Frames×3, no valido para matrices de 3×Frames).
@@ -12,6 +10,13 @@
 %   perpendiculares entre si y tienen modulo 1. En caso de que no lo 
 %   sean por display se reporta el motivo por el que no cumplen con la 
 %   ortonormalidad.
+% EJEMPLO
+% verificar si i,j y k del muslo derecho son versores (modulo 1) y 
+% perpendiculares entre si:
+%   ortonormalidad_triada(iMusloDerecho,jMusloDerecho,kMusloDerecho)
+% 
+% Autor: Marcos Dominguez
+% Agosto 2020
 function ortonormalidad_triada(v1,v2,v3)
 % el producto punto de dos versores perpendiculares es igual a cero. Lo
 % usamos para verificar perpendicularidad.

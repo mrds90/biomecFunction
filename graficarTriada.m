@@ -1,22 +1,24 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
-
+% graficarTriada(V1,V2,V3,origen,frame,linewidth)
+% 
 % grafica tres vectores en matrices (frames×3) en el "frame" indicado con 
 % cola en "origen".
 % "origen" es una matriz (frames×3) con posiciones en el espacio.
 % los vectores se grafican con cola en la posción de "origen" en el "frame"
 % pasado en una escala de 1:10.
 % ENTRADA
-% V1, V2 y V3: son marices de tamaño [n×3] donde cada fila representa a un
-% vector. La fila numero "frame" corresponde al vector que se va a
-% graficar. Los elementos son del tipo double.
-% origen: es una matriz de tamaño [n×3] donde cada fila representa una
-% pocision en el espacio. La fila numero "frame" corresponde a la posición
-% de origen de los vectores V1,V2 y V3. Los elementos son del tipo double.
-% frame: es el frame o nro de fila que se quiere graficar de las variables
-% anteriores. Es un entero (int) de tamaño [1×1].
-% linewidth: es un dato numerico mayor a cero (>0) y es directamente
-% proporcional al ancho del trazo del vector.
+%   V1, V2 y V3: son marices de tamaño [n×3] donde cada fila representa a un
+%   vector. La fila numero "frame" corresponde al vector que se va a
+%   graficar. Los elementos son del tipo double.
+%   origen: es una matriz de tamaño [n×3] donde cada fila representa una
+%   pocision en el espacio. La fila numero "frame" corresponde a la posición
+%   de origen de los vectores V1,V2 y V3. Los elementos son del tipo double.
+%   frame: es el frame o nro de fila que se quiere graficar de las variables
+%   anteriores. Es un entero (int) de tamaño [1×1].
+%   linewidth: es un dato numerico mayor a cero (>0) y es directamente
+%   proporcional al ancho del trazo del vector.
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 
 function graficarTriada(V1,V2,V3,origen,frame,linewidth)
 v1=V1(frame,:)/10;

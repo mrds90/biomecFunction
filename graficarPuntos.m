@@ -1,5 +1,4 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
+% graficarPuntos(color,frame,varargin)
 % Permite graficar en un volumen 3d un punto o varios puntos
 % correspondientes a un mismo frame con el color deseado a partir de las
 % matrices de posición de dichos puntos.
@@ -16,7 +15,9 @@
 %   Grafica en una figura de los puntos elegidos en el espacio.
 % EJEMPLO
 % graficarPuntos('r',EVENTO.RHS1,MARCADORES.r_asis,MARCADORES.r_knee1,MARCADORES.r_heel)
-
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 
 
 

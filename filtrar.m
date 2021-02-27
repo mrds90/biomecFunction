@@ -1,5 +1,5 @@
-% Autor: Marcos Dominguez
-% Abril 2019
+% ESTRUCTURA_FILTRADA=filtrar(fc,orden,MARCADORES,frecuenciaDeMestreo)
+% 
 % Filtrado Butterworth de los elementos de una Estructura (MARCADORES)
 % donde se define la frecuencia de corte y el orden del filtro. La función
 % requiere la frecuencia de muestreo para definir el filtro digital.
@@ -15,6 +15,13 @@
 %   MARCADORES cuyas matrices fueron filtradas en función de los
 %   parametros deseados. El tamaño de las matrices se conserva pero cambian
 %   los valores de sus elementos.
+% EJEMPLO
+%   Aplicar filtro butterworth pasa bajos con frecuncia de corte 8 y de 
+%   orden dos en ambos sentidos a marcadores adquiridos a 340 hz:
+%      MARCADORES_FILTRADOS=filtrar(8,2,MARCADORES,340)
+% 
+% Autor: Marcos Dominguez
+% Abril 2019
 
 function ESTRUCTURA_FILTRADA=filtrar(fc,orden,MARCADORES,frecuenciaDeMestreo)
 Wc=2*fc/frecuenciaDeMestreo; % frecuencia de corte normalizada

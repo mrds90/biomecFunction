@@ -1,5 +1,5 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
+% fuerzaResultante=sumatoria_de_fuerzas(masa,aceleracion,varargin)
+% 
 % Recibe como parámetros masa (escalar), aceleración (vector si es un frame
 % o matriz si son varios frames) y fuerzas (vector si es un frame o matriz 
 % si son varios frames) y devuelve el valor de la fuerza resultante
@@ -30,6 +30,9 @@
 %   será la fuerza en la articulación proximal del segmento.
 % EJEMPLO
 %   fuerzaRodilla=sumatoria_de_fuerzas(masaPierna,aceleracionCMPierna,-FuerzaTobillo)
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 function fuerzaResultante=sumatoria_de_fuerzas(masa,aceleracion,varargin)
 frames=length(aceleracion); % evalúo la cantidad de frames
 gravedad=[ zeros(frames,2) , -9.8*ones(frames,1)]; %defino vector gravedad para todos los frames

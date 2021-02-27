@@ -1,10 +1,9 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
+% [PrimerDato , UltimoDato]=detectar_inicio_y_fin(MARCADORES)
 % Funcion que busca los indices donde se garantiza que entre esos dos frames 
 % no hay ningun NaN entre todos los marcadores 
 % ENTRADA
-% MARCADORES: estructura que tiene como campos las matrices de marcadores
-% en un formato [n×3].
+%   MARCADORES: estructura que tiene como campos las matrices de marcadores
+%   en un formato [n×3].
 % SALIDA
 %   PrimerDato: Expresa cual es el minimo indice (frame) que garantiza la
 %   ausencia de NaN para TODOS los marcadores hasta que terminen los dos
@@ -16,6 +15,9 @@
 %   este indice hay algun marcador que toma el valor NaN.
 % Esta función ignora los centros de presión (ultimos dos marcadores) para
 % el analisis.
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 function [PrimerDato , UltimoDato]=detectar_inicio_y_fin(MARCADORES)
 Subnivel=fieldnames(MARCADORES);% obtengo los nombres de los marcadores
 Tamano=length(Subnivel); %cuento la cantidad de elementos

@@ -1,5 +1,5 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
+% momentoResultante=sumatoria_de_momentos(centroDeMomento,d1HGlobal,momentoDistalGlobal,varargin)
+% 
 % La función recibe el centro de momento, la variacion de cantidad de
 % movimiento angular, el momento distal (o arbitrario en el caso del pie) y los pares de fuerza + punto de
 % aplicacion.
@@ -34,11 +34,14 @@
 %   elementos son del tipo double. Tipicamente este momento será el de la 
 %   articulación proximal del segmento en estudio.
 % EJEMPLO
-% para en el pie:
-% momentoDelTobillo=sumatoria_de_momentos(centroDeMasaDelPie,d1HDelPieEnSistemaGlobal,TzPlataforma,FuerzaPlataforma,centroDePresion,FuerzaDeTobillo,centroArticularTobillo)
-% en el ejemplo vemos que cada fuerza tiene como siguiente argumento su
-% punto de aplicación(varargin son pares de: fuerza , punto de aplicacion)
-% devuelve el momento necesario para balancear la sumatoria de momentos.
+%   para en el pie:
+%       momentoDelTobillo=sumatoria_de_momentos(centroDeMasaDelPie,d1HDelPieEnSistemaGlobal,TzPlataforma,FuerzaPlataforma,centroDePresion,FuerzaDeTobillo,centroArticularTobillo)
+%   en el ejemplo vemos que cada fuerza tiene como siguiente argumento su
+%   punto de aplicación(varargin son pares de: fuerza , punto de aplicacion)
+%   devuelve el momento necesario para balancear la sumatoria de momentos.
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 function momentoResultante=sumatoria_de_momentos(centroDeMomento,d1HGlobal,momentoDistalGlobal,varargin)
     momentoResidual=momentoDistalGlobal;
     for i=1:2:length(varargin)

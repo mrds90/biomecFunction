@@ -1,4 +1,5 @@
 % [Matriz]=vectores_de_estructura_a_matriz(ESTRUCTURA)
+% 
 % recorre los campos de una estructura (que sean vectores) y devuelve una 
 % matriz compuesta por los vectores.
 % Convierte los campos de una estructura en un vector/matriz de n×m, donde

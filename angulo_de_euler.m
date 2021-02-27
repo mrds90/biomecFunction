@@ -1,5 +1,5 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020.
+% resultado=angulo_de_euler(iLocal,jLocal,kLocal,angulo)
+% 
 % Funcion que a partir de los versores i,j,k local de un segmento devuelve
 % el angulo de euler deseado (alfa, beta o gama) en radianes.
 % No tiene aplicado algoritmo de correción de salto +pi -pi. Se sugiere 
@@ -21,7 +21,11 @@
 %   frames×3. En el caso de que las entradas sean 3×frames, la salida sera
 %   de 1×frames.
 %   Los elementos del vector son el angulo de Euler deseado en radianes.
-
+% EJEMPLO
+% alfaDeMusloDerecho=angulo_de_euler(iMusloDerecho,jMusloDerecho,kMusloDerecho,'alfa')
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020.
 
 
 

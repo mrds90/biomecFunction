@@ -1,9 +1,10 @@
-%abril 2019
-%Autor: Marcos Dominguez.
-
+% estructura=derivar_estructutra(estructura,dt)
 % Aplica derivada a los campos finales de una estructura respecto a su
 % maxima dimensión (tipicamente dimensión que representa a los frames). 
 % Devuelve una estructura identica (estructuralmene) pero con los valores derivadoes.
+% 
+% Autor: Marcos Dominguez.
+% abril 2019
 
 function estructura=derivar_estructutra(estructura,dt)
 

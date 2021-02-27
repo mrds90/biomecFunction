@@ -1,16 +1,19 @@
-% Noviebre 2020
-% Autor:Marcos Dominguez
+% ANGULO= corr_ang180(vector)
 % Suaviza los saltos de +PI a -PI rad en un vector de angulos.
 % ENTRADA
-% vector: es un vector de tamaño [n×1] o [1×n], donde n corresponde
-% generalmente al número de frames que se están trabajando. Cada elemento
-% del vector es un valor angular en radianes.
-% SALIDA:
-% ANGULO: es un vector del mismo tamaño que la entrada cuyos elementos son
-% identicos si no habia discontinuidades en la señal y suavizada si en el
-% vector de entrada habia saltos cercanos a los 2*PI. La unidad de los
-% elementos sigue siendo radianes.
-
+%   vector: es un vector de tamaño [n×1] o [1×n], donde n corresponde
+%   generalmente al número de frames que se están trabajando. Cada elemento
+%   del vector es un valor angular en radianes.
+% SALIDA
+%   ANGULO: es un vector del mismo tamaño que la entrada cuyos elementos son
+%   identicos si no habia discontinuidades en la señal y suavizada si en el
+%   vector de entrada habia saltos cercanos a los 2*PI. La unidad de los
+%   elementos sigue siendo radianes.
+% EJEMPLO
+%   alfaMusloDerechoCorregido=corr_ang180(alfaMusloDerechoOriginal)
+% 
+% Autor:Marcos Dominguez
+% Noviebre 2020
 
 function ANGULO= corr_ang180(vector)
 if length(vector(:,1))>length(vector(1,:))

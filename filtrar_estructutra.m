@@ -1,3 +1,4 @@
+% A=filtrar_estructutra(estructura,a,b)
 % Funcion que reccorre una estructura y ejecuta la función filtfilt sobre los
 % elementos al final de la cadena de la estructura con los argumentos a y
 % b.
@@ -9,7 +10,12 @@
 % SALIDA
 %   A: es un struct de formato idéntico a la variable "estructura", cuyas
 %   matrices estan filtradas con la funcion filtfilt y los vectores de
-%   coeficientes a y b.
+%   coeficientes a y b
+% EJEMPLO
+%   MARCADORES_FILTRADOS=filtrar_estructutra(MARCADORES,[1.00,0.04,0.9],[0.9,0.98,0.87])
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 
 function A=filtrar_estructutra(estructura,a,b)
     if isstruct(estructura)

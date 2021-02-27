@@ -1,5 +1,3 @@
-%Autor: Marcos Dominguez
-%Noviembre 2020
 % La funcion calcula el modulo de filas o columnas de una matriz que tenga 
 % alguna de sus dimenciones de tamaño igual a 3. Verifica si la fila o la
 % columna tiene tres componentes y a esa dimensión le calcula el módulo
@@ -11,7 +9,16 @@
 %  de la fila o columna a evaluar.
 %  Si la matriz de entrada no posee las dimensiones adecuadas (una dimension
 %  igual a 3) la salida es igual a 0.
-
+% EJEMPLO
+% calcular rapidez del muslo a partir del vector velocidad lineal del muslo
+% para todos los frames:
+% rapidezMuslo= calculaModulo(velocidadCentroDeMasaMuslo)
+% rapidezMuslo es un vector de [1×n] si velocidadCentroDeMasaMuslo es de
+% tamaño [3×n]. Si velocidadCentroDeMasaMuslo es de tamaño [n×3]
+% rapidezMuslo tendrá tamaño [n×1].
+%
+% Autor: Marcos Dominguez
+% Noviembre 2020
 function MODULO = calculaModulo(matriz)
 if length(matriz(1,:))==3
 MODULO = sqrt(sum(abs(matriz).^2,2));

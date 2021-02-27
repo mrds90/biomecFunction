@@ -1,3 +1,5 @@
+% [ESTRUCTURA] = recorta_datos(ESTRUCTURA,PrimerMuestra,UltimaMuestra)
+% 
 % Recorre los campos de una estructura y recorta todas las primeras 
 % dimensiones (filas) de la matriz entre los indices elegidos en el 
 % argumento
@@ -17,6 +19,9 @@
 %   UltimaMuestra.
 % EJEMPLO
 %   MARCADORES_RECORTADOS=recorta_datos(MARCADORES,RHS1-10,LHS2+10)
+% 
+% Autor: Marcos Dominguez
+% Agosto 2020
 %--------------------------------------------------------------------------
 function [ESTRUCTURA] = recorta_datos(ESTRUCTURA,PrimerMuestra,UltimaMuestra)
     if isstruct(ESTRUCTURA)

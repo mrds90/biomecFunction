@@ -1,5 +1,5 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
+% SenialSubmuestreada=submuestrear(Senial,Salto)
+% 
 % La función submuestrea una matriz o todos los campos de una etructura. 
 % Devuelve una estructura con el mismo formato donde todos sus campos fueron
 % submestreados segun el salto seteado. El submuestreo es respecto a las
@@ -20,6 +20,12 @@
 %   posee los elementos de todas las filas que satifacen fila=1+n×Salto con
 %   n= 0, 1, 2, ..., N. Donde N es la cantidad de filas que tiene la matriz 
 %   que se submuestrea.
+% EJEMPLO
+% Submuestrear los datos dinamicos de la plataforma 1 del c3d
+%   DATOS.Dinamica.Plataforma1.ValoresSubmuestreados=submuestrear(DATOS.Dinamica.Plataforma1.Valores,3)
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 function SenialSubmuestreada=submuestrear(Senial,Salto)
 if isstruct(Senial)
         Subnivel=fieldnames(Senial);

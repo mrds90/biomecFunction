@@ -1,4 +1,5 @@
 % unirPuntos(color,frame,varargin)
+% 
 % función que permite graficar en el espacio 3d lineas que unen puntos de
 % ese espacio para un frame determinado. Es util para representar segmentos
 % formados por dos centros articulares o dibujar el miembro inferior 
@@ -21,14 +22,14 @@
 %   las lineas se corresponde con el orden en el que se ingresan las
 %   matrices del varargin a la función.
 % EJEMPLO
-% dibujo de segmento pierna y muslo derecho en el espacio para el frame 10 
-% en color rojo:
-% unirPuntos('r',10,CentroArticularTobilloDerecho,CentroArticularRodillaDerecha,CentroArticularCaderaDerecha)
-% donde CentroArticularTobilloDerecha, CentroArticularRodillaDerecha y 
-% CentroArticularCaderaDerecha son matrices de tamaño [frames×3] y
-% sus filas representan a la ubicación en el espacio de los centros 
-% articulares (de tobillo, rodilla y cadera respectivamente) para cada 
-% frame.
+%   dibujo de segmento pierna y muslo derecho en el espacio para el frame 10 
+%   en color rojo:
+%       unirPuntos('r',10,CentroArticularTobilloDerecho,CentroArticularRodillaDerecha,CentroArticularCaderaDerecha)
+%   donde CentroArticularTobilloDerecha, CentroArticularRodillaDerecha y 
+%   CentroArticularCaderaDerecha son matrices de tamaño [frames×3] y
+%   sus filas representan a la ubicación en el espacio de los centros 
+%   articulares (de tobillo, rodilla y cadera respectivamente) para cada 
+%   frame.
 % 
 % Autor: Marcos Dominguez
 % Noviembre 2020

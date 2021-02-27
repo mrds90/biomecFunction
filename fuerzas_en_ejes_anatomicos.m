@@ -1,5 +1,4 @@
-%Autor: Marcos Dominguez
-% Noviembre 2020
+% nuevo_vector=fuerzas_en_ejes_anatomicos(vector,eje_medial_lateral, eje_rotacion_int_ext,lado)
 % La funcion recive como parametros una Fuerza en coordenadas globales y
 % dos ejes anatomicos (eje medial/lateral y rotacion int/ext). Calcula el 
 % tercer eje anatómico y descompone el vector de fuerza en esos tres ejes.
@@ -27,7 +26,12 @@
 %   eje medial/lateral, en la columna dos esta la proyección sobre el eje 
 %   de abducción/aducción y en la columna tres esta la proyección del 
 %   vector fuerza sobre el eje de rotación int/ext.
-    
+% EJEMPLO
+%   Fuerza de la rodilla derecha en ejes anatómicos
+%   FuerzaRodillaDerechaAnatomica=fuerzas_en_ejes_anatomicos(FuerzaDeRodillaDerecha,kMusloDerecho, iPiernaDerecha,'r')
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020    
 function nuevo_vector=fuerzas_en_ejes_anatomicos(vector,eje_medial_lateral, eje_rotacion_int_ext,lado)
 eje_antero_posterior=cross(eje_medial_lateral,eje_rotacion_int_ext);
 eje_antero_posterior=convierteVectorAVersor(eje_antero_posterior);

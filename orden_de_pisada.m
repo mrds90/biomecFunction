@@ -1,5 +1,4 @@
-% Autor: Marcos Dominguez
-% Noviembre 2020
+% contactos=orden_de_pisada(rhs1,lhs1)
 % detecta en función de los valores de los heel contact iniciales el orden
 % de pisada e los miembros.
 % ENTRADA
@@ -10,7 +9,9 @@
 %   contactos: es una variable de tipo cell {1×2} que tiene como elementos
 %   dos char. El cell es {'r','l'} si primero sucede el ciclo derecho y
 %   {'l','r'} si primero sucede el cicl izquierdo.
-
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 function contactos=orden_de_pisada(rhs1,lhs1)
     if (rhs1 < lhs1) 
         contactos = {'r','l'};

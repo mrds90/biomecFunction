@@ -1,5 +1,4 @@
-%autor: Marcos Dominguez
-%Noviembre 2020
+% matriz=calcular_matriz_de_cambio_de_base(eje,angulo)
 % La funcion calcula las matrices de cambio de base respecto a un eje
 % elegido. El valor de estas matrices dependen de los angulos que se
 % utilizan para definirlas.
@@ -15,7 +14,15 @@
 %  la longitud de la variable de entrada 'angulo'. Cada matriz de [3×3]
 %  corresponde a la matriz de cambio de base en el eje elegido (x,y o z)
 %  con el angulo correspondiente al indice del vector 'angulo'.
-
+% EJEMPLO
+%  definicion de matriz de cambio de base para el sistema intermedio
+%  "prima" a el sistema coordenado local el muslo derecho.
+%  matrizDeSistemaPrimaALocalDeMusloDerecho=calcular_matriz_de_cambio_de_base('z',gammaMusloDerecho)
+%  la varaible "gammaMusloDerecho" es un vector de n elementos donde cada
+%  elemento es el angulo gama en radianes del muslo derecho.
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 
 function matriz=calcular_matriz_de_cambio_de_base(eje,angulo)% angulo en Rad
     switch eje

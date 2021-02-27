@@ -1,38 +1,35 @@
-%Noviembre 2020
-%Autor: Marcos Dominguez
-%Función que calcula los angulos de flexión/extención, abducción/aducción y rotación
-%interna/externa de una articulación en grados utilizando los versores asociados al sistema
-%coordenado local de los segmentos que se vinculan a la articulación en
-%estudio.
+% [alpha,beta,gamma]=angulos_articulares(iProximal,jProximal,kProximal,iDistal,kDistal,articulacion,lado)
+% Función que calcula los angulos de flexión/extención, abducción/aducción 
+% y rotación interna/externa de una articulación en grados utilizando los 
+% versores asociados al sistema coordenado local de los segmentos que se 
+% vinculan a la articulación en estudio.
 % ENTRADAS
-% - iProximal ,jProximal y kProximal: son matrices de tamaño 3×frames o
-% frames×3 que corresponden a los versores i,j y k del segmento
-% proximal a la articulación para todos los frames. Los elementos de la
-% matriz son numericos y adimensionales.
-% - iDistal,kDistal: son matrices de tamaño 3×frames o
-% frames×3 que corresponden a los versores i y k del segmento
-% distal a la articulación para todos los frames. Los elementos de la
-% matriz son numericos y adimensionales.
-% - lado: indica si se quiere evaluar una articulación del lado derecho 
-% o izquierdo. 1 si es derecha y -1 si es izquierda.
-% - articulacion: variable de tipo char que define que articulación se
-% estudiara. Las opciones son 'cadera', 'rodilla' y 'tobillo'.
+%   iProximal ,jProximal y kProximal: son matrices de tamaño 3×nro-de-frames o
+%   nro-de-frames×3 que corresponden a los versores i,j y k del segmento
+%   proximal a la articulación. Los elementos de la
+%   matriz son numericos y adimensionales.
+%   iDistal,kDistal: son matrices de tamaño 3×nro-de-frames o
+%   nro-de-frames×3 que corresponden a los versores i y k del segmento
+%   distal a la articulación para todos los frames. Los elementos de la
+%   matriz son numericos y adimensionales.
+%   articulacion: variable de tipo char que define que articulación se
+%   estudiara. Las opciones son 'cadera', 'rodilla' y 'tobillo'.
+%   lado: indica si se quiere evaluar una articulación del lado derecho 
+%   o izquierdo. 1 si es derecha y -1 si es izquierda.
 % SALIDAS
-% alpha: vector cuyos elementos son el angulo alfa de la articulacion
-% deseada por cada frame. Los elementos del vector estan en grados. El
-% tamaño del vector es de 1×frames si las matrices de entrada son de
-% 3×frames. En el caso de que las de que las matrices de entrada sean de
-% frames×3 alpha será de frames×1.
-% beta: vector cuyos elementos son el angulo beta de la articulacion
-% deseada por cada frame. Los elementos del vector estan en grados. El
-% tamaño del vector es de 1×frames si las matrices de entrada son de
-% 3×frames. En el caso de que las de que las matrices de entrada sean de
-% frames×3 beta será de frames×1.
-% gamma: vector cuyos elementos son el angulo gama de la articulacion
-% deseada por cada frame. Los elementos del vector estan en grados. El
-% tamaño del vector es de 1×frames si las matrices de entrada son de
-% 3×frames. En el caso de que las de que las matrices de entrada sean de
-% frames×3 gamma será de frames×1.
+%   alpha, beta y gamma: vectores cuyos elementos son el angulo alfa, beta 
+%   y gamma respectivamente de la articulacion deseada por cada frame. Los 
+%   elementos de cada vector estan en grados. El tamaño de cada vector es 
+%   de 1×nro-de-frames si las matrices de entrada son de 3×nro-de-frames. 
+%   En el caso de que las matrices de entrada sean de nro-de-frames×3 
+%   alpha, cada vector tendrá un tamaño de de nro-de-frames×1.
+% 
+% EJEMPLO para llamar a la función, para calcular los ángulos de rodilla 
+% derecha:
+%   [alpharodd,betarodd,gammarodd]=angulos_articulares(imuslo,jmuslo,kmuslo,ipierna,kpierna,'rodilla',1);
+% 
+% Autor: Marcos Dominguez
+% Noviembre 2020
 
 
 
