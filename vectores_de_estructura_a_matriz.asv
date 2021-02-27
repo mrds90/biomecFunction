@@ -1,10 +1,10 @@
 % [Matriz]=vectores_de_estructura_a_matriz(ESTRUCTURA)
 % recorre los campos de una estructura (que sean vectores) y devuelve una 
-% matriz compuesta por los vectores.
-% Convierte los campos de una estructura en un vector/matriz de n×m, donde
+% matriz compuesta por los vectores
+% Convierte los campos de una estructura en un vector/matriz de n×m. donde
 % n es la cantidad de elementos que tiene cada campos de la estructura y m
-% es la cantidad de campos que tiene la estructura. La estructura debe
-% tener campos del tipo numérico, todos los campos deben tener la misma
+% es la cantidad de campos que tienen la estructura. La estructura debe
+% tener campos del tipo numerico, todos los campos deben tener la misma
 % cantidad de elentos (n) y formato [1×n].
 % ENTRADA
 %   ESTRUCTURA: es una estrutura con m cantidad de campos, cuyos campos son
@@ -27,6 +27,7 @@
 %       - L_HS2 = 572
 %   VectorEventos: será un vector de tamaño [6×1] cuyos elementos seran:
 %   10, 180, 317, 120, 420 y 572.
+% 
 % 
 % Autor: Marcos Dominguez
 % Noviembre 2020
