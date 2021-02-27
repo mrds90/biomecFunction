@@ -31,11 +31,12 @@
 %   "centroDeMomento" donde cada fila, de esta, representa el momento
 %   necesario para balancear la sumatoria de momentos en un frame en 
 %   términos del sistema coordenado global. Sus valores estan en N×m y sus 
-%   elementos son del tipo double. Tipicamente este momento será el de la 
-%   articulación proximal del segmento en estudio.
+%   elementos son del tipo double. Tipicamente 
+%   este momento será el de la articulación proximal del segmento en 
+%   estudio.
 % EJEMPLO
 % para en el pie:
-% momentoDelTobillo=sumatoria_de_momentos(centroDeMasaDelPie,d1HDelPieEnSistemaGlobal,TzPlataforma,FuerzaPlataforma,centroDePresion,FuerzaDeTobillo,centroArticularTobillo)
+% sumatoria_de_momentos(centroDeMasaDelPie,d1HDelPieEnSistemaGlobal,TzPlataforma,FuerzaPlataforma,centroDePresion,FuerzaDeTobillo,centroArticularTobillo)
 % en el ejemplo vemos que cada fuerza tiene como siguiente argumento su
 % punto de aplicación(varargin son pares de: fuerza , punto de aplicacion)
 % devuelve el momento necesario para balancear la sumatoria de momentos.
