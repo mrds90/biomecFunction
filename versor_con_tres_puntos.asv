@@ -1,5 +1,9 @@
-% versor=versor_con_dos_puntos(cabeza,cola)
-% 
+% versor=versor_con_tres_puntos(cabeza1,cabeza2,cola)
+% Calcula el versor con dirección perpendicular al plano formado por los
+% tres puntos.
+% Cola es el punto común a los dos versores calculados y el sentido respeta
+% la regla de la mando derecha para el producto cruz entre el versor que
+% tiene a cabeza1 por el que tiene cabeza2.
 % Calcula el versor con dirección coincidente al segmento de recta entre
 % los puntos "cabeza" y "cola".El sentido del versor es desde "cola" a 
 % "cabeza".
@@ -17,7 +21,7 @@
 % 
 % Autor: Marcos Dominguez
 % Noviembre 2020
-function versor=versor_con_dos_puntos(cabeza,cola)
-vector=cabeza-cola;
+function versor=versor_con_tres_puntos(cabeza1,cabeza2,cola)
+vector=cross(cabeza1-cola,cabeza2-cola);
 versor=convierteVectorAVersor(vector);
 end
