@@ -6,7 +6,10 @@ function [marcadores,informacionCine,Fuerzas,informacionFuerzas,Antropometria,Ev
 %  discriminnados en variable como se decribe en cada una 
  %"fileName" que es solamente el nombre del archivo que permite al llegar al "main" ver en el workspace el archivo sobre el que estoy trabajando
 
-[fileName, filePath] = uigetfile('*.c3d'); % Se obtiene  el nombre y direccion del archivo con una ventana emergente
+ % fileName='0037_Davis_MarchaDavis_Walking02C2020Cu2.c3d';
+ % filePath='D:\GitProyects\Biomecanica\Matlab\Registros\';
+
+ [fileName, filePath] = uigetfile('*.c3d'); % Se obtiene  el nombre y direccion del archivo con una ventana emergente
 [h,~,~] = btkReadAcquisition([filePath fileName]); % Se obtiene un puntero al archivo c3d con el nombre y la ubicacion del archivo especificado
 btkSetPointsUnit(h, 'marker', 'm')
 [premarcadores informacionCine] = btkGetMarkers(h); % Se cargan los datos de los marcadores y la informaci�n cinematica a esas dos variables " marcadores" y "informacionCine"
