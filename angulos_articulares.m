@@ -47,6 +47,7 @@ function [alpha,beta,gamma]=angulos_articulares(iProximal,jProximal,kProximal,iD
     end
 disp('      calculando I articular')   
     IArticular=cross(kProximal,iDistal); % calculo de i de artiulación
+    IArticular=convierteVectorAVersor(IArticular);
     if (strcmp(articulacion,'tobillo')) % control si es la articulación del tobillo porque el angulo alpha difiere en el cálculo.
         disp('      calculando alfa')
         alpha=-asind(dot(IArticular,jProximal));%%rotación sobre eje articular 1 (coincide con k proximal)
